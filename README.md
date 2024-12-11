@@ -1,2 +1,34 @@
-# drf-api-kickstart
-This is a template repository which helps to kickstart Django Rest Framework(DRF) applications
+# Django Project Template
+
+This repository serves as a template for setting up Django projects quickly and easily. It includes essential configurations and packages to streamline the development of common backend features. Ideal for developers looking for a reliable starting point, this template supports multiple databases, token-based authentication, external storage integration, and real-time WebSocket communication.
+
+## Features
+
+- **Multi-Environment Setup**  
+  Pre-configured settings for development, staging, and production environments, allowing you to switch between them effortlessly by adjusting environment variables.
+
+- **Database Support**  
+  Out-of-the-box support for the following databases:
+
+  - MySQL
+  - PostgreSQL
+  - MSSQL
+  - MariaDB
+  - MongoDB
+  - OracleDB
+
+- **Token-Based Authentication**  
+  Integrated token-based authentication using Django REST Framework (DRF), ready to be used with APIs.
+
+- **Django REST Framework (DRF)**  
+  A pre-configured setup for building RESTful APIs using DRF, saving time on setup and integration.
+
+- **Django-Storages Integration**  
+  Seamless integration with `django-storages` for easy communication with external storage systems, such as Amazon S3 and Google Cloud Storage.
+
+- **WebSocket Support (Channels)**  
+  Real-time communication capabilities through WebSocket support via Django Channels.
+
+## Acknowledgments
+
+Parts of this project are inspired by the [HackSoft Styleguide Example](https://github.com/HackSoftware/Django-Styleguide-Example), which is licensed under the MIT License.
