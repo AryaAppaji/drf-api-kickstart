@@ -1,25 +1,34 @@
-MIT License
+# Django Project Template
 
-Copyright (c) 2024 AryaAppaji
+This is a template repository aimed at simplifying the setup of a Django project. It includes essential configurations and packages that help you get started quickly with a variety of common backend features. This template is perfect for developers who need a solid starting point for their Django projects, with support for multiple databases, token-based authentication, external storage, and real-time WebSocket communication.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## Features
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+- **Multi-Environment Setup**  
+  Pre-configured settings for development, staging, and production environments. Easily switch between environments by configuring environment variables.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+- **Database Support**  
+  Supports the following databases out of the box:
 
-Acknowledgement
+  - MySQL
+  - PostgreSQL
+  - MSSQL
+  - MariaDB
+  - MongoDB
+  - OracleDB
 
-Some parts of this project are inspired from [HackSoft Styleguide Example](https://github.com/HackSoftware/Django-Styleguide-Example)
+- **Token-Based Authentication**  
+  Comes with token-based authentication setup using Django REST Framework (DRF), ready for use with APIs.
+
+- **Django REST Framework (DRF)**  
+  Provides pre-configured setup for creating RESTful APIs using DRF, saving you time on setup and integration.
+
+- **Django-Storages Integration**  
+  Out-of-the-box integration with `django-storages` for seamless communication with external storage systems (e.g., Amazon S3, Google Cloud Storage, etc.).
+
+- **WebSocket Support (Channels)**  
+  WebSocket support is included using Django Channels, enabling real-time communication features in your application.
+
+## Acknowledgments
+
+Some parts of this project are inspired by the [HackSoft Styleguide Example](https://github.com/HackSoftware/Django-Styleguide-Example), which is licensed under the MIT License.
