@@ -11,7 +11,6 @@ SECRET_KEY = env.str("DJANGO_SECRET_KEY", get_random_secret_key())
 DEBUG = env.bool("DJANGO_DEBUG", True)
 
 INSTALLED_APPS += [
-    "authentication_app.apps.AuthenticationAppConfig",
     "rest_framework",
     "rest_framework.authtoken",
     "silk",
