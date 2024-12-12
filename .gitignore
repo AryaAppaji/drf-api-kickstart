@@ -1,3 +1,4 @@
 venv/
 .env
+.ruff_cache/
 *.py[cod]
