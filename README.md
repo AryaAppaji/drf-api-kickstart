@@ -17,9 +17,6 @@ This repository serves as a template for setting up Django projects quickly and 
   - MongoDB
   - OracleDB
 
-- **Token-Based Authentication**  
-  Integrated token-based authentication using Django REST Framework (DRF), ready to be used with APIs.
-
 - **Django REST Framework (DRF)**  
   A pre-configured setup for building RESTful APIs using DRF, saving time on setup and integration.
 
