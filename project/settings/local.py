@@ -32,6 +32,41 @@ DATABASES = {
     }
 }
 
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {
+        "verbose": {
+            "format": "{name} {levelname} {asctime} {module} {message}",
+            "style": "{",
+        },
+        "simple": {
+            "format": "{levelname} {message}",
+            "style": "{",
+        },
+    },
+    "handlers": {
+        "file": {
+            "level": "DEBUG",  # Capture all logs from DEBUG and above
+            "class": "logging.FileHandler",
+            "filename": "django.log",
+            "formatter": "verbose",  # Use the detailed formatter
+        },
+    },
+    "root": {
+        "handlers": ["file"],  # Attach the file handler to capture all logs
+        "level": "DEBUG",      # Capture all logs starting from DEBUG
+    },
+    "loggers": {
+        "custom": {
+            "handlers": ["file"],  # Attach the file handler for Django-specific logs
+            "level": "DEBUG",      # Capture all logs starting from DEBUG
+            "propagate": False,
+        },
+    },
+}
+
+
 REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
