@@ -1,0 +1,29 @@
+[project]
+dependencies = [
+  "django-extensions>=3.2.3",
+  "django>=5.1.4",
+  "django-environ>=0.11.2",
+  "djangorestframework>=3.15.2",
+  "django-seed>=0.3.1",
+  "factory-boy>=3.3.1",
+  "django-storages>=1.14.4",
+  "django-import-export>=4.3.3",
+  "drf-spectacular>=0.28.0",
+  "django-redis>=5.4.0",
+  "channels>=4.2.0",
+  "mysqlclient>=2.2.6",
+  "psycopg>=3.2.3",
+  "djongo>=1.2.31",
+  "oracledb>=2.5.1",
+  "django-mssql-backend>=2.8.1",
+  "mariadb>=1.1.11",
+  "requests>=2.32.3",
+  "django-silk>=5.3.1",
+  "ruff>=0.8.3",
+  "jinja2>=3.1.4",
+]
+description = "This project aims to simplify the django project setup by including the most useful packages"
+name = "drf-api-kickstart"
+readme = "README.md"
+requires-python = ">=3.13"
+version = "0.1.0"

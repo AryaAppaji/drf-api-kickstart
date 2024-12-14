@@ -55,13 +55,13 @@ LOGGING = {
     },
     "root": {
         "handlers": ["file"],  # Attach the file handler to capture all logs
-        "level": "DEBUG",      # Capture all logs starting from DEBUG
+        "level": "DEBUG",  # Capture all logs starting from DEBUG
     },
     "loggers": {
-        "custom": {
+        "django": {
             "handlers": ["file"],  # Attach the file handler for Django-specific logs
-            "level": "DEBUG",      # Capture all logs starting from DEBUG
-            "propagate": False,
+            "level": "DEBUG",  # Capture all logs starting from DEBUG
+            "propagate": True,
         },
     },
 }
