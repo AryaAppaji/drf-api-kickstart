@@ -8,7 +8,7 @@ This repository serves as a template for setting up Django projects quickly and 
   Pre-configured settings for development, staging, and production environments, allowing you to switch between them effortlessly by adjusting environment variables.
 
 - **Database Support**  
-  Out-of-the-box support for the following databases:
+  Packages included for the following databases:
 
   - MySQL
   - PostgreSQL
@@ -21,7 +21,7 @@ This repository serves as a template for setting up Django projects quickly and 
   A pre-configured setup for building RESTful APIs using DRF, saving time on setup and integration.
 
 - **Django-Storages Integration**  
-  Seamless integration with `django-storages` for easy communication with external storage systems, such as Amazon S3 and Google Cloud Storage.
+  Seamless integration with `django-storages` for easy communication with external storage systems, such as Amazon S3.
 
 - **WebSocket Support (Channels)**  
   Real-time communication capabilities through WebSocket support via Django Channels.
