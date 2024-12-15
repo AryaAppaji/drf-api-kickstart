@@ -1,6 +1,6 @@
 # Django Project Template
 
-This repository serves as a template for setting up Django projects quickly and easily. It includes essential configurations and packages to streamline the development of common backend features. Ideal for developers looking for a reliable starting point, this template supports multiple databases, token-based authentication, external storage integration, and real-time WebSocket communication.
+This repository serves as a template for setting up Django projects quickly and easily. It includes essential configuration and packages to streamline the development of common backend features. Ideal for developers looking for a reliable starting point, this template supports multiple databases, external storage integration, and real-time WebSocket communication.
 
 ## Features
 
