@@ -24,6 +24,12 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         # Add the arguments for your command here.
+        '''
+        Example:
+        parser.add_argument(
+            "command_name", type=str, help="Command name you want to add"
+        )
+        '''
         pass
 
     def handle(self, *args, **options):
