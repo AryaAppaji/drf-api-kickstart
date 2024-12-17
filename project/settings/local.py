@@ -7,6 +7,7 @@ env = environ.Env()
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 environ.Env.read_env(os.path.join(BASE_DIR, ".env"))
 
+TIME_ZONE = env.str("TIME_ZONE", "Asia/Kolkata")
 SECRET_KEY = env.str("DJANGO_SECRET_KEY", get_random_secret_key())
 DEBUG = env.bool("DJANGO_DEBUG", True)
 
