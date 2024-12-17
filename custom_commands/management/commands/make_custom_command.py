@@ -15,10 +15,9 @@ class Command(BaseCommand):
         if not options["command_name"]:
             self.stdout.write(self.style.ERROR("Please enter command name"))
 
-        content = """
-from django.core.management.base import BaseCommand
+        content = """from django.core.management.base import BaseCommand
 
-
+        
 class Command(BaseCommand):
     help=""
 
