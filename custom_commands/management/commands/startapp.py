@@ -20,11 +20,7 @@ class Command(BaseCommand):
             )
             return
 
-        if (
-            app_name.startswith("_")
-            or app_name.endswith("_")
-            or "_" == app_name
-        ):
+        if app_name.startswith("_") or app_name.endswith("_") or "_" == app_name:
             self.stdout.write(
                 self.style.ERROR(
                     "App name cannot start, end with an underscore, or be only underscores."
@@ -129,9 +125,7 @@ class {app_config_name}(AppConfig):
                             if settings_content[j].strip().endswith("]"):
                                 # Check if app already exists
                                 if f"    '{app_name}',\n" not in settings_content:
-                                    settings_content.insert(
-                                        j, f"    '{app_name}',\n"
-                                    )
+                                    settings_content.insert(j, f"    '{app_name}',\n")
                                 break
 
                         # Write the updated settings back to the file
@@ -151,7 +145,9 @@ class {app_config_name}(AppConfig):
                         )
                 else:
                     self.stdout.write(
-                        self.style.WARNING(f"Settings file {settings_file.name} not found.")
+                        self.style.WARNING(
+                            f"Settings file {settings_file.name} not found."
+                        )
                     )
             except Exception as e:
                 self.stdout.write(
