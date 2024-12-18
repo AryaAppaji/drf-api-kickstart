@@ -2,6 +2,7 @@ from django.core.management.base import BaseCommand
 from django.core.management.utils import get_random_secret_key
 from pathlib import Path
 
+
 class Command(BaseCommand):
     help = "Generates and sets a random secret key in the .env file."
 
@@ -12,7 +13,11 @@ class Command(BaseCommand):
 
             if not env_path.exists():
                 # Log an error and stop execution if the .env file does not exist
-                self.stdout.write(self.style.ERROR(f".env file not found. Please create a .env file before running this command."))
+                self.stdout.write(
+                    self.style.ERROR(
+                        f".env file not found. Please create a .env file before running this command."
+                    )
+                )
                 return
 
             # Read the existing .env file
@@ -22,10 +27,14 @@ class Command(BaseCommand):
             # Update the DJANGO_SECRET_KEY line if it exists, or append it
             for i, line in enumerate(env_content):
                 if line.startswith("DJANGO_SECRET_KEY"):
-                    env_content[i] = f"DJANGO_SECRET_KEY='{secret_key}'\n"  # Overwrite the line
+                    env_content[i] = (
+                        f"DJANGO_SECRET_KEY='{secret_key}'\n"  # Overwrite the line
+                    )
                     break
             else:
-                env_content.append(f"DJANGO_SECRET_KEY='{secret_key}'\n")  # Add if not found
+                env_content.append(
+                    f"DJANGO_SECRET_KEY='{secret_key}'\n"
+                )  # Add if not found
 
             # Write the updated content back to the .env file
             with open(env_path, "w") as env_file:
