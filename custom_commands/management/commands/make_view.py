@@ -20,6 +20,7 @@ class Command(BaseCommand):
         app_name = input("Enter the app name\n")
         if not app_name:
             self.stdout.write(self.style.ERROR("Please provide app name"))
+            return
         else:
             try:
                 apps.get_app_config(app_name)
@@ -30,6 +31,7 @@ class Command(BaseCommand):
         view_name = input("Enter the view name\n")
         if not view_name:
             self.stdout.write(self.style.ERROR("Please provide view name."))
+            return
 
         view_path = os.path.join(app_name, f"views/{view_name}.py")
 
