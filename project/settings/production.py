@@ -60,7 +60,9 @@ LOGGING = {
     },
     "loggers": {
         "django": {
-            "handlers": ["file"],  # Attach the file handler for Django-specific logs
+            "handlers": [
+                "file"
+            ],  # Attach the file handler for Django-specific logs
             "level": "DEBUG",  # Capture all logs starting from DEBUG
             "propagate": True,
         },

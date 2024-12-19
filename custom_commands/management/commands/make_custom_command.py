@@ -37,11 +37,17 @@ class Command(BaseCommand):
 """
 
         file_path = Path(__file__).resolve().parent
-        write_destination = os.path.join(file_path, options["command_name"] + ".py")
+        write_destination = os.path.join(
+            file_path, options["command_name"] + ".py"
+        )
 
         try:
             with open(write_destination, "w") as file:
                 file.write(content)
-            self.stdout.write(self.style.SUCCESS(f"Command created successfully"))
+            self.stdout.write(
+                self.style.SUCCESS("Command created successfully")
+            )
         except Exception as e:
-            self.stdout.write(self.style.ERROR(f"Error in creating command: {str(e)}"))
+            self.stdout.write(
+                self.style.ERROR(f"Error in creating command: {str(e)}")
+            )

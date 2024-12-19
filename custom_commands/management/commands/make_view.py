@@ -1,5 +1,4 @@
 from django.core.management.base import BaseCommand
-from pathlib import Path
 from django.apps import apps
 import os
 
@@ -25,7 +24,9 @@ class Command(BaseCommand):
             try:
                 apps.get_app_config(app_name)
             except LookupError:
-                self.stdout.write(self.style.ERROR(f"App '{app_name}' not found."))
+                self.stdout.write(
+                    self.style.ERROR(f"App '{app_name}' not found.")
+                )
                 return
 
         view_name = input("Enter the view name\n")
@@ -46,7 +47,7 @@ class Command(BaseCommand):
         try:
             with open(view_path, "w") as view:
                 view.writelines(content)
-        except Exception as e:
-            self.stdout.write(self.style.ERROR(f"Failed to create view."))
+        except Exception:
+            self.stdout.write(self.style.ERROR("Failed to create view."))
             return
-        self.stdout.write(self.style.SUCCESS(f"View created successfully."))
+        self.stdout.write(self.style.SUCCESS("View created successfully."))

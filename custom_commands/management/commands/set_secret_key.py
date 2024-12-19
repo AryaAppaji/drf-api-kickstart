@@ -15,7 +15,7 @@ class Command(BaseCommand):
                 # Log an error and stop execution if the .env file does not exist
                 self.stdout.write(
                     self.style.ERROR(
-                        f".env file not found. Please create a .env file before running this command."
+                        ".env file not found. Please create a .env file before running this command."
                     )
                 )
                 return
@@ -40,6 +40,10 @@ class Command(BaseCommand):
             with open(env_path, "w") as env_file:
                 env_file.writelines(env_content)
 
-            self.stdout.write(self.style.SUCCESS("Secret key set successfully."))
+            self.stdout.write(
+                self.style.SUCCESS("Secret key set successfully.")
+            )
         except Exception as e:
-            self.stdout.write(self.style.ERROR(f"Secret key setup failed: {str(e)}"))
+            self.stdout.write(
+                self.style.ERROR(f"Secret key setup failed: {str(e)}")
+            )

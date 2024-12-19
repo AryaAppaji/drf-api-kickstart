@@ -1,30 +1,40 @@
 [project]
 dependencies = [
-  "django-extensions>=3.2.3", # Adds additional features to django.
-  "django>=5.1.4", # Django Framework.
-  "django-environ>=0.11.2", # Allows for environement variables management.
-  "djangorestframework>=3.15.2", # Allows to write APIs with django.
-  "django-seed>=0.3.1", # Provides seeders functionality.
-  "factory-boy>=3.3.1", # Adds support for factories.
-  "django-storages>=1.14.4", # Allows to use S3 storage.
+  "django-extensions>=3.2.3",    # Adds additional features to Django.
+  "django>=5.1.4",               # Django Framework.
+  "django-environ>=0.11.2",      # Allows for environment variables management.
+  "djangorestframework>=3.15.2", # Enables building APIs with Django.
+  "django-seed>=0.3.1",          # Provides data seeding functionality.
+  "factory-boy>=3.3.1",          # Adds support for factories in tests.
+  "django-storages>=1.14.4",     # Enables the use of S3 storage.
   "django-import-export>=4.3.3", # Adds data import and export capabilities.
-  "drf-spectacular>=0.28.0", # Generates API documentation automatically.
-  "django-redis>=5.4.0", # Allows usage of redis.
-  "channels>=4.2.0", # Allows websocket communication.
-  "mysqlclient>=2.2.6", # Provides ability to operate MySQL database from Django.
-  "psycopg>=3.2.3", # Provides ability to operate PostgreSQL database from Django.
-  "djongo>=1.2.31", # Provides ability to operate MongoDB database from Django.
-  "oracledb>=2.5.1", # Provides ability to operate OracleDB database from Django.
-  "django-mssql-backend>=2.8.1", # Provides ability to operate MicrosoftSQL(MSSQL) database from Django.
-  "mariadb>=1.1.11", # Provides ability to operate MariaDB database from Django.
-  "requests>=2.32.3", # Allows django application to communicate with external APIs.
-  "django-silk>=5.3.1", # Provides request monitoring.
-  "ruff>=0.8.3", # Linter and formatter.
-  "jinja2>=3.1.4", # Provides support for Jinja templates.
-  "pytest-django>=4.9.0", # Allows to write unit-tests.
+  "drf-spectacular>=0.28.0",     # Automatically generates API documentation.
+  "django-redis>=5.4.0",         # Integrates Redis as a cache backend.
+  "channels>=4.2.0",             # Enables WebSocket communication.
+  "mysqlclient>=2.2.6",          # Provides support for MySQL database.
+  "psycopg>=3.2.3",              # Provides support for PostgreSQL database.
+  "djongo>=1.2.31",              # Enables MongoDB integration with Django.
+  "oracledb>=2.5.1",             # Enables OracleDB integration with Django.
+  "django-mssql-backend>=2.8.1", # Enables MSSQL database integration with Django.
+  "mariadb>=1.1.11",             # Provides support for MariaDB database.
+  "requests>=2.32.3",            # Allows Django applications to interact with external APIs.
+  "django-silk>=5.3.1",          # Provides request/response monitoring and profiling.
+  "ruff>=0.8.3",                 # Python linter and formatter.
+  "jinja2>=3.1.4",               # Adds support for Jinja templates.
+  "pytest-django>=4.9.0",        # Facilitates unit testing with Django.
 ]
-description = "This project aims to simplify the django project setup by including the most useful packages"
+description = "This project aims to simplify Django project setup by including the most useful packages."
 name = "drf-api-kickstart"
 readme = "README.md"
 requires-python = ">=3.13"
 version = "0.1.0"
+
+[tool.ruff]
+# Set the maximum line length to 79 characters.
+line-length = 79
+
+lint.ignore = [
+  "F403",
+  "F405",
+  "E501",
+] # Ignore specific rules related to unused imports.

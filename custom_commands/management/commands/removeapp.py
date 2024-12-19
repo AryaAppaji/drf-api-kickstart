@@ -9,7 +9,9 @@ class Command(BaseCommand):
     help = "Used to remove an existing app"
 
     def add_arguments(self, parser):
-        parser.add_argument("app_name", type=str, help="App name you want to remove.")
+        parser.add_argument(
+            "app_name", type=str, help="App name you want to remove."
+        )
 
     def handle(self, *args, **options):
         app_name = options["app_name"]
@@ -67,9 +69,13 @@ class Command(BaseCommand):
                 )
             except Exception as e:
                 self.stdout.write(
-                    self.style.ERROR(f"Error while removing app directory: {e}")
+                    self.style.ERROR(
+                        f"Error while removing app directory: {e}"
+                    )
                 )
         else:
             self.stdout.write(
-                self.style.WARNING(f"App directory '{app_directory}' does not exist.")
+                self.style.WARNING(
+                    f"App directory '{app_directory}' does not exist."
+                )
             )
