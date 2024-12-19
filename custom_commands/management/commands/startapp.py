@@ -85,6 +85,12 @@ class {app_config_name}(AppConfig):
 
 """
 
+        # Content for serializers.py
+        serializers_py_content = """from rest_framework import serailizers
+
+# Define your serializers here.
+"""
+
         # Files and their contents
         file_contents = {
             "__init__.py": "",
@@ -92,8 +98,8 @@ class {app_config_name}(AppConfig):
             "apps.py": apps_py_content,
             "models.py": models_py_content,
             "tests.py": tests_py_content,
+            "serializers.py": serializers_py_content,
             "migrations/__init__.py": "",
-            "serializers/__init__.py": "",
             "services/__init__.py": "",
             "views/__init__.py": "",
         }
