@@ -84,6 +84,7 @@ class {app_config_name}(AppConfig):
             "models.py": models_py_content,
             "tests.py": tests_py_content,
             "migrations/__init__.py": "",
+            "serializers/__init__.py": "",
             "services/__init__.py": "",
             "views/__init__.py": "",
         }
