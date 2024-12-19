@@ -4,26 +4,27 @@ from django.core.management import call_command
 from pathlib import Path
 import shutil
 
+
 class Command(BaseCommand):
     help = "Used to remove an existing app"
 
     def add_arguments(self, parser):
-        parser.add_argument(
-            "app_name", type=str, help="App name you want to remove."
-        )
+        parser.add_argument("app_name", type=str, help="App name you want to remove.")
 
     def handle(self, *args, **options):
-        app_name = options['app_name']
-        
+        app_name = options["app_name"]
+
         # Check if app exists
         try:
             apps.get_app_config(app_name)
         except LookupError:
             self.stdout.write(self.style.ERROR(f"App '{app_name}' not found."))
             return
-        
+
         if app_name == "custom_commands":
-            self.stdout.write(self.style.ERROR("You cannot remove the custom commands app"))
+            self.stdout.write(
+                self.style.ERROR("You cannot remove the custom commands app")
+            )
             return
 
         # Rollback migrations for the app
@@ -59,8 +60,16 @@ class Command(BaseCommand):
         if app_directory.exists():
             try:
                 shutil.rmtree(app_directory)
-                self.stdout.write(self.style.SUCCESS(f"App '{app_name}' and its contents successfully removed."))
+                self.stdout.write(
+                    self.style.SUCCESS(
+                        f"App '{app_name}' and its contents successfully removed."
+                    )
+                )
             except Exception as e:
-                self.stdout.write(self.style.ERROR(f"Error while removing app directory: {e}"))
+                self.stdout.write(
+                    self.style.ERROR(f"Error while removing app directory: {e}")
+                )
         else:
-            self.stdout.write(self.style.WARNING(f"App directory '{app_directory}' does not exist."))
+            self.stdout.write(
+                self.style.WARNING(f"App directory '{app_directory}' does not exist.")
+            )
