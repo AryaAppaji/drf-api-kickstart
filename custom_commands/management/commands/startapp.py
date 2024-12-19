@@ -6,7 +6,9 @@ class Command(BaseCommand):
     help = "Create a new Django app with a custom structure and add it to all settings files"
 
     def add_arguments(self, parser):
-        parser.add_argument("app_name", type=str, help="App name you want to create")
+        parser.add_argument(
+            "app_name", type=str, help="App name you want to create"
+        )
 
     def handle(self, *args, **options):
         app_name = options["app_name"]
@@ -20,7 +22,11 @@ class Command(BaseCommand):
             )
             return
 
-        if app_name.startswith("_") or app_name.endswith("_") or "_" == app_name:
+        if (
+            app_name.startswith("_")
+            or app_name.endswith("_")
+            or "_" == app_name
+        ):
             self.stdout.write(
                 self.style.ERROR(
                     "App name cannot start, end with an underscore, or be only underscores."
@@ -36,7 +42,9 @@ class Command(BaseCommand):
 
         # Check if the app directory already exists
         if app_directory.exists():
-            self.stdout.write(self.style.WARNING(f"App '{app_name}' already exists."))
+            self.stdout.write(
+                self.style.WARNING(f"App '{app_name}' already exists.")
+            )
             return
 
         # Create the app directory
@@ -51,7 +59,8 @@ class Command(BaseCommand):
 
         # Create AppConfig name
         app_config_name = (
-            "".join(word.capitalize() for word in app_name.split("_")) + "Config"
+            "".join(word.capitalize() for word in app_name.split("_"))
+            + "Config"
         )
 
         # Content for apps.py
@@ -122,11 +131,18 @@ class {app_config_name}(AppConfig):
 
                     if installed_apps_index is not None:
                         # Find the end of the INSTALLED_APPS list
-                        for j in range(installed_apps_index, len(settings_content)):
+                        for j in range(
+                            installed_apps_index, len(settings_content)
+                        ):
                             if settings_content[j].strip().endswith("]"):
                                 # Check if app already exists
-                                if f"    '{app_name}',\n" not in settings_content:
-                                    settings_content.insert(j, f"    '{app_name}',\n")
+                                if (
+                                    f"    '{app_name}',\n"
+                                    not in settings_content
+                                ):
+                                    settings_content.insert(
+                                        j, f"    '{app_name}',\n"
+                                    )
                                 break
 
                         # Write the updated settings back to the file
@@ -158,4 +174,6 @@ class {app_config_name}(AppConfig):
                 )
 
         # Success message
-        self.stdout.write(self.style.SUCCESS(f"'{app_name}' created successfully."))
+        self.stdout.write(
+            self.style.SUCCESS(f"'{app_name}' created successfully.")
+        )

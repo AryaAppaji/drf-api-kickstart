@@ -34,7 +34,9 @@ class Command(BaseCommand):
         # Check if models.py exists
         if not os.path.exists(model_file_path):
             self.stdout.write(
-                self.style.ERROR(f"models.py file not found in app '{app_name}'.")
+                self.style.ERROR(
+                    f"models.py file not found in app '{app_name}'."
+                )
             )
             return
 
@@ -66,7 +68,9 @@ class {model_name}(models.Model):
         # Append the new model content to the file
         try:
             with open(model_file_path, "w") as file:
-                file.writelines(lines)  # Write the lines back, including the import
+                file.writelines(
+                    lines
+                )  # Write the lines back, including the import
                 file.write(model_content)  # Add the new model at the end
             self.stdout.write(
                 self.style.SUCCESS(
@@ -74,4 +78,6 @@ class {model_name}(models.Model):
                 )
             )
         except Exception as e:
-            self.stdout.write(self.style.ERROR(f"Error adding model: {str(e)}"))
+            self.stdout.write(
+                self.style.ERROR(f"Error adding model: {str(e)}")
+            )
