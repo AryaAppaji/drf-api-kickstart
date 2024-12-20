@@ -1,23 +1,27 @@
 from django.core.management.base import BaseCommand
 from pathlib import Path
 import os
+from argparse import ArgumentParser
+from typing import Any
 
 
 class Command(BaseCommand):
-    help = "Allows to create a custom command"
+    help: str = "Allows to create a custom command"
 
-    def add_arguments(self, parser):
+    def add_arguments(self, parser: ArgumentParser) -> None:
         parser.add_argument(
             "command_name", type=str, help="Command name you want to add"
         )
 
-    def handle(self, *args, **options):
-        if not options["command_name"]:
+    def handle(self, *args: Any, **options: Any) -> None:
+        command_name: str = options["command_name"].strip().lower()
+        if not command_name:
             self.stdout.write(self.style.ERROR("Please enter command name"))
+            return
 
-        content = """from django.core.management.base import BaseCommand
+        content: str = """from django.core.management.base import BaseCommand
 
-        
+
 class Command(BaseCommand):
     help=""
 
@@ -36,10 +40,8 @@ class Command(BaseCommand):
         pass
 """
 
-        file_path = Path(__file__).resolve().parent
-        write_destination = os.path.join(
-            file_path, options["command_name"] + ".py"
-        )
+        file_path: Path = Path(__file__).resolve().parent
+        write_destination: Path = file_path / f"{command_name}.py"
 
         try:
             with open(write_destination, "w") as file:
