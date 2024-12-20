@@ -3,20 +3,21 @@ from django.apps import apps
 from django.core.management import call_command
 from pathlib import Path
 import shutil
+from typing import List, Any
 
 
 class Command(BaseCommand):
-    help = "Used to remove an existing app"
+    help: str = "Used to remove an existing app"
 
-    def add_arguments(self, parser):
+    def add_arguments(self, parser: Any) -> None:
         parser.add_argument(
             "app_name", type=str, help="App name you want to remove."
         )
 
-    def handle(self, *args, **options):
-        app_name = options["app_name"]
+    def handle(self, *args: Any, **options: Any) -> None:
+        app_name: str = options["app_name"].strip().lower()
 
-        # Check if app exists
+        # Check if the app exists
         try:
             apps.get_app_config(app_name)
         except LookupError:
@@ -25,7 +26,7 @@ class Command(BaseCommand):
 
         if app_name == "custom_commands":
             self.stdout.write(
-                self.style.ERROR("You cannot remove the custom commands app")
+                self.style.ERROR("You cannot remove the custom commands app.")
             )
             return
 
@@ -33,13 +34,15 @@ class Command(BaseCommand):
         call_command("migrate", app_name, "zero")
 
         # Get project root directory
-        root_directory = Path(__file__).resolve().parent.parent.parent.parent
+        root_directory: Path = (
+            Path(__file__).resolve().parent.parent.parent.parent
+        )
 
         # Create the app directory path
-        app_directory = root_directory / app_name
+        app_directory: Path = root_directory / app_name
 
         # List of settings files
-        settings_files = [
+        settings_files: List[Path] = [
             root_directory / "project" / "settings" / "local.py",
             root_directory / "project" / "settings" / "dev.py",
             root_directory / "project" / "settings" / "qa.py",
@@ -49,14 +52,22 @@ class Command(BaseCommand):
         # Remove the app from settings files
         for settings_file in settings_files:
             if settings_file.exists():
-                with settings_file.open("r") as file:
-                    lines = file.readlines()
-                with settings_file.open("w") as file:
-                    for line in lines:
-                        # Remove the app from the INSTALLED_APPS list
-                        if app_name in line:
-                            continue
-                        file.write(line)
+                try:
+                    with settings_file.open("r") as file:
+                        lines = file.readlines()
+                    with settings_file.open("w") as file:
+                        for line in lines:
+                            # Remove the app from the INSTALLED_APPS list
+                            if app_name in line:
+                                continue
+                            file.write(line)
+                except Exception as e:
+                    self.stdout.write(
+                        self.style.ERROR(
+                            f"Error while modifying {settings_file}: {e}"
+                        )
+                    )
+                    return
 
         # Remove the app directory recursively
         if app_directory.exists():
