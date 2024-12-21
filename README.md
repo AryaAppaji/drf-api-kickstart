@@ -26,6 +26,23 @@ This repository serves as a template for setting up Django projects quickly and 
 - **WebSocket Support (Channels)**  
   Real-time communication capabilities through WebSocket support via Django Channels.
 
+- **Pre-built custom-commands for faster development**
+  `add_model` - Adds the basic sacaffold for given model name to the given app.
+
+  `make_custom_command` - Adds the boilerplate to create a custom command.
+
+  `make_view` - Adds the boilerplate to create a view file in given app.
+
+  `removeapp` - Removes the given app from the project.
+
+  `set_secret_key` - Creates the secret key for the selected environment and adds it to the `.env` file.
+
+  `setup_crud_view` - Creates a view for the CRUD operations along with their serializers under the given app.
+
+  `startapp` - Customized the built-in startapp command to include additional directories and add the newly created app to the settings file.
+
+  To know how to use this template see [SETUP.md](SETUP.md)
+
 ## Acknowledgments
 
 Parts of this project are inspired by the [HackSoft Styleguide Example](https://github.com/HackSoftware/Django-Styleguide-Example), which is licensed under the MIT License.
