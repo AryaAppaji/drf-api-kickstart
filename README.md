@@ -41,6 +41,8 @@ This repository serves as a template for setting up Django projects quickly and 
 
   `startapp` - Customized the built-in startapp command to include additional directories and add the newly created app to the settings file.
 
+  To know how to use this template see [SETUP.md](SETUP.md)
+
 ## Acknowledgments
 
 Parts of this project are inspired by the [HackSoft Styleguide Example](https://github.com/HackSoftware/Django-Styleguide-Example), which is licensed under the MIT License.
