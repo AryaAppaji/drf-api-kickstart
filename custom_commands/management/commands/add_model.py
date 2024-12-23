@@ -63,13 +63,8 @@ class {model_name}(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-    def save(self, *args: Any, **kwargs: Any) -> None:
-        self.updated_at = now()  # Automatically update the field
-        super().save(*args, **kwargs)
-
     class Meta:
         db_table = "{table_name}"
-        ordering = ['-created_at']
 """
 
         # Append the new model content to the file
