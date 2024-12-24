@@ -98,7 +98,7 @@ from ..serializers.{view_name.replace('_view', '')}_serializer import (
 )
 
 
-class {viewset_name}ViewSet(ViewSet):
+class {class_name}ViewSet(ViewSet):
     def list(self, request):
         pass
 
