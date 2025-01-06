@@ -20,18 +20,6 @@ wheels = [
 ]
 
 [[package]]
-name = "autopep8"
-version = "2.3.1"
-source = { registry = "https://pypi.org/simple" }
-dependencies = [
-    { name = "pycodestyle" },
-]
-sdist = { url = "https://files.pythonhosted.org/packages/6c/52/65556a5f917a4b273fd1b705f98687a6bd721dbc45966f0f6687e90a18b0/autopep8-2.3.1.tar.gz", hash = "sha256:8d6c87eba648fdcfc83e29b788910b8643171c395d9c4bcf115ece035b9c9dda", size = 92064 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ad/9e/f0beffe45b507dca9d7540fad42b316b2fd1076dc484c9b1f23d9da570d7/autopep8-2.3.1-py2.py3-none-any.whl", hash = "sha256:a203fe0fcad7939987422140ab17a930f684763bf7335bdb6709991dd7ef6c2d", size = 45667 },
-]
-
-[[package]]
 name = "certifi"
 version = "2024.8.30"
 source = { registry = "https://pypi.org/simple" }
@@ -243,18 +231,16 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/5a/19/0423c1a8adb10c9e246f3a0e661165a7851bb7f4253eb338624081343e76/django-seed-0.3.1.tar.gz", hash = "sha256:93e65d2c10449c464b83e9031be02763ec10e786aa064d649c4dd5ad06fa0eea", size = 18336 }
 
 [[package]]
-name = "django-silk"
-version = "5.3.1"
+name = "django-sonar"
+version = "0.1.8"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "autopep8" },
     { name = "django" },
-    { name = "gprof2dot" },
     { name = "sqlparse" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3b/51/946db6764e8de1654c8469b7ddb72cd0c093ac2d3e3c0c8c819455d6f733/django_silk-5.3.1.tar.gz", hash = "sha256:aa4ae73a90fcbd5159a810f81e15a0ec010619beab37c82957eb4012fd0016f0", size = 4493512 }
+sdist = { url = "https://files.pythonhosted.org/packages/c4/01/e8a7f6e595d1f424fff83b9dc3d89386faf4cead82b761ef8d58d24de0de/django_sonar-0.1.8.tar.gz", hash = "sha256:38f86c97696e4cae3e9386b4178a1a9a85177e00ec6d189aae71852c537deb4f", size = 287398 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/89/a1/79cfea660d49ea02a1c014a08585da8d5d40014cbbced93f0706e6cb883f/django_silk-5.3.1-py3-none-any.whl", hash = "sha256:7834580fabea5d9e8a32eabb0d9cb061cc37f0ec057d2933b4da761a53ae1bed", size = 1942523 },
+    { url = "https://files.pythonhosted.org/packages/43/29/282fcc6d067fb7af3f1dc105160da6d3eff888fdc46ec1c3de33604c7bf3/django_sonar-0.1.8-py3-none-any.whl", hash = "sha256:add002dfb29002b742a5e3a829986edad8ea97eb39e6d1420fa461b988ffdb00", size = 296053 },
 ]
 
 [[package]]
@@ -318,7 +304,7 @@ dependencies = [
     { name = "django-mssql-backend" },
     { name = "django-redis" },
     { name = "django-seed" },
-    { name = "django-silk" },
+    { name = "django-sonar" },
     { name = "django-storages" },
     { name = "djangorestframework" },
     { name = "djongo" },
@@ -344,7 +330,7 @@ requires-dist = [
     { name = "django-mssql-backend", specifier = ">=2.8.1" },
     { name = "django-redis", specifier = ">=5.4.0" },
     { name = "django-seed", specifier = ">=0.3.1" },
-    { name = "django-silk", specifier = ">=5.3.1" },
+    { name = "django-sonar", specifier = ">=0.1.8" },
     { name = "django-storages", specifier = ">=1.14.4" },
     { name = "djangorestframework", specifier = ">=3.15.2" },
     { name = "djongo", specifier = ">=1.2.31" },
@@ -400,15 +386,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/1e/9f/012fd6049fc86029951cba5112d32c7ba076c4290d7e8873b0413655b808/faker-33.1.0.tar.gz", hash = "sha256:1c925fc0e86a51fc46648b504078c88d0cd48da1da2595c4e712841cab43a1e4", size = 1850515 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/08/9c/2bba87fbfa42503ddd9653e3546ffc4ed18b14ecab7a07ee86491b886486/Faker-33.1.0-py3-none-any.whl", hash = "sha256:d30c5f0e2796b8970de68978365247657486eb0311c5abe88d0b895b68dff05d", size = 1889127 },
-]
-
-[[package]]
-name = "gprof2dot"
-version = "2024.6.6"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/32/11/16fc5b985741378812223f2c6213b0a95cda333b797def622ac702d28e81/gprof2dot-2024.6.6.tar.gz", hash = "sha256:fa1420c60025a9eb7734f65225b4da02a10fc6dd741b37fa129bc6b41951e5ab", size = 36536 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/ae/27/15c4d20871a86281e2bacde9e9f634225d1c2ed0db072f98acf201022411/gprof2dot-2024.6.6-py2.py3-none-any.whl", hash = "sha256:45b14ad7ce64e299c8f526881007b9eb2c6b75505d5613e96e66ee4d5ab33696", size = 34763 },
 ]
 
 [[package]]
@@ -571,15 +548,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/d1/ad/7ce016ae63e231575df0498d2395d15f005f05e32d3a2d439038e1bd0851/psycopg-3.2.3.tar.gz", hash = "sha256:a5764f67c27bec8bfac85764d23c534af2c27b893550377e37ce59c12aac47a2", size = 155550 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/ce/21/534b8f5bd9734b7a2fcd3a16b1ee82ef6cad81a4796e95ebf4e0c6a24119/psycopg-3.2.3-py3-none-any.whl", hash = "sha256:644d3973fe26908c73d4be746074f6e5224b03c1101d302d9a53bf565ad64907", size = 197934 },
-]
-
-[[package]]
-name = "pycodestyle"
-version = "2.12.1"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/43/aa/210b2c9aedd8c1cbeea31a50e42050ad56187754b34eb214c46709445801/pycodestyle-2.12.1.tar.gz", hash = "sha256:6838eae08bbce4f6accd5d5572075c63626a15ee3e6f842df996bf62f6d73521", size = 39232 }
-wheels = [
-    { url = "https://files.pythonhosted.org/packages/3a/d8/a211b3f85e99a0daa2ddec96c949cac6824bd305b040571b82a03dd62636/pycodestyle-2.12.1-py2.py3-none-any.whl", hash = "sha256:46f0fb92069a7c28ab7bb558f05bfc0110dac69a0cd23c61ea0040283a9d78b3", size = 31284 },
 ]
 
 [[package]]

@@ -14,12 +14,13 @@ DEBUG = env.bool("DJANGO_DEBUG", True)
 INSTALLED_APPS += [
     "rest_framework",
     "rest_framework.authtoken",
-    "silk",
+    "django_sonar",
     "drf_spectacular",
+    "custom_commands",
 ]
 
 MIDDLEWARE += [
-    "silk.middleware.SilkyMiddleware",
+    "django_sonar.middlewares.requests.RequestsMiddleware",
 ]
 
 DATABASES = {
@@ -79,4 +80,12 @@ SPECTACULAR_SETTINGS = {
     "DESCRIPTION": "Your Project Description",
     "VERSION": "1.0.0",
     "SCHEMA_PATH_PREFIX": "/api/",
+}
+
+DJANGO_SONAR = {
+    "excludes": [
+        "/sonar/",
+        "/admin/",
+        "/__reload__/",
+    ],
 }
