@@ -24,7 +24,7 @@ from drf_spectacular.views import (
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("silk/", include("silk.urls")),
+    path("sonar/", include("django_sonar.urls")),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
         "api/redoc/",
