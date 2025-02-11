@@ -27,6 +27,7 @@ This repository serves as a template for setting up Django projects quickly and 
   Real-time communication capabilities through WebSocket support via Django Channels.
 
 - **Pre-built custom-commands for faster development**
+  
   `add_model` - Adds the basic sacaffold for given model name to the given app.
 
   `make_custom_command` - Adds the boilerplate to create a custom command.
