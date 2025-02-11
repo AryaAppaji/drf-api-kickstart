@@ -1,7 +1,6 @@
 from django.core.management.base import BaseCommand
 from django.core.management.utils import get_random_secret_key
 from pathlib import Path
-from typing import List
 
 
 class Command(BaseCommand):
@@ -22,7 +21,7 @@ class Command(BaseCommand):
                 return
 
             # Read the existing .env file
-            env_content: List[str] = []
+            env_content: list[str] = []
             with env_path.open("r") as env_file:
                 env_content = env_file.readlines()
 

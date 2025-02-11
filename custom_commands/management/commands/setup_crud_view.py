@@ -1,12 +1,12 @@
 from django.core.management.base import BaseCommand
 from pathlib import Path
-from typing import Optional
+from typing import Any
 
 
 class Command(BaseCommand):
     help: str = "Setup a view and its serializers for CRUD operations."
 
-    def handle(self, *args: object, **options: object) -> None:
+    def handle(self, *args: Any, **options: Any) -> None:
         view_name: str = input("Enter your view name:\n").strip().lower()
 
         if not view_name:
