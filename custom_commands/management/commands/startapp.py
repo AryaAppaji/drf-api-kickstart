@@ -11,7 +11,7 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        app_name = options["app_name"]
+        app_name: str = options["app_name"]
 
         # Validate app name
         if not app_name.isidentifier():
@@ -39,7 +39,7 @@ class Command(BaseCommand):
         app_directory.mkdir(parents=True, exist_ok=False)
 
         # Define content for app files
-        file_templates = {
+        file_templates: dict = {
             "__init__.py": "",
             "admin.py": "from django.contrib import admin\n\n# Register your models here.\n",
             "apps.py": f"""from django.apps import AppConfig
@@ -70,7 +70,7 @@ class {app_name.capitalize()}Config(AppConfig):
         )
 
         # Settings file paths
-        settings_files = [
+        settings_files: list[Path] = [
             root_directory / "project" / "settings" / "local.py",
             root_directory / "project" / "settings" / "dev.py",
             root_directory / "project" / "settings" / "qa.py",

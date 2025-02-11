@@ -3,7 +3,7 @@ from django.apps import apps
 from django.core.management import call_command
 from pathlib import Path
 import shutil
-from typing import List, Any
+from typing import Any
 
 
 class Command(BaseCommand):
@@ -42,7 +42,7 @@ class Command(BaseCommand):
         app_directory: Path = root_directory / app_name
 
         # List of settings files
-        settings_files: List[Path] = [
+        settings_files: list[Path] = [
             root_directory / "project" / "settings" / "local.py",
             root_directory / "project" / "settings" / "dev.py",
             root_directory / "project" / "settings" / "qa.py",

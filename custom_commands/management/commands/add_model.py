@@ -1,7 +1,7 @@
 import os
 from django.core.management.base import BaseCommand
 from django.apps import apps
-from typing import Any, List
+from typing import Any
 
 
 class Command(BaseCommand):
@@ -44,7 +44,7 @@ class Command(BaseCommand):
         # Read the models.py file and check for the import
         try:
             with open(model_file_path, "r") as file:
-                lines: List[str] = file.readlines()
+                lines: list[str] = file.readlines()
         except FileNotFoundError:
             self.stdout.write(
                 self.style.ERROR(f"Unable to read {model_file_path}.")

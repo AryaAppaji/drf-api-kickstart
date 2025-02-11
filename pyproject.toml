@@ -1,27 +1,27 @@
 [project]
 dependencies = [
-  "django-extensions>=3.2.3", # Adds additional features to Django.
-  "django>=5.1.4", # Django Framework.
-  "django-environ>=0.11.2", # Allows for environment variables management.
+  "django-extensions>=3.2.3",    # Adds additional features to Django.
+  "django>=5.1.6",               # Django Framework.
+  "django-environ>=0.12.0",      # Allows for environment variables management.
   "djangorestframework>=3.15.2", # Enables building APIs with Django.
-  "django-seed>=0.3.1", # Provides data seeding functionality.
-  "factory-boy>=3.3.1", # Adds support for factories in tests.
-  "django-storages>=1.14.4", # Enables the use of S3 storage.
-  "django-import-export>=4.3.3", # Adds data import and export capabilities.
-  "drf-spectacular>=0.28.0", # Automatically generates API documentation.
-  "django-redis>=5.4.0", # Integrates Redis as a cache backend.
-  "channels>=4.2.0", # Enables WebSocket communication.
-  "mysqlclient>=2.2.6", # Provides support for MySQL database.
-  "psycopg>=3.2.3", # Provides support for PostgreSQL database.
-  "djongo>=1.2.31", # Enables MongoDB integration with Django.
-  "oracledb>=2.5.1", # Enables OracleDB integration with Django.
+  "django-seed>=0.3.1",          # Provides data seeding functionality.
+  "factory-boy>=3.3.3",          # Adds support for factories in tests.
+  "django-storages>=1.14.4",     # Enables the use of S3 storage.
+  "django-import-export>=4.3.5", # Adds data import and export capabilities.
+  "drf-spectacular>=0.28.0",     # Automatically generates API documentation.
+  "django-redis>=5.4.0",         # Integrates Redis as a cache backend.
+  "channels>=4.2.0",             # Enables WebSocket communication.
+  "mysqlclient>=2.2.7",          # Provides support for MySQL database.
+  "psycopg>=3.2.4",              # Provides support for PostgreSQL database.
+  "djongo>=1.2.31",              # Enables MongoDB integration with Django.
+  "oracledb>=2.5.1",             # Enables OracleDB integration with Django.
   "django-mssql-backend>=2.8.1", # Enables MSSQL database integration with Django.
-  "mariadb>=1.1.11", # Provides support for MariaDB database.
-  "requests>=2.32.3", # Provides request/response monitoring and profiling.
-  "ruff>=0.8.3", # Python linter and formatter.
-  "jinja2>=3.1.4", # Adds support for Jinja templates.
-  "pytest-django>=4.9.0", # Facilitates unit testing with Django.
-  "django-sonar>=0.1.8",
+  "mariadb>=1.1.11",             # Provides support for MariaDB database.
+  "requests>=2.32.3",            # Provides request/response monitoring and profiling.
+  "ruff>=0.9.6",                 # Python linter and formatter.
+  "jinja2>=3.1.5",               # Adds support for Jinja templates.
+  "pytest-django>=4.10.0",       # Facilitates unit testing with Django.
+  "django-sonar>=0.1.8",         # Request monitoring for django applications.
 ]
 description = "This project aims to simplify Django project setup by including the most useful packages."
 name = "drf-api-kickstart"
@@ -34,7 +34,7 @@ version = "0.1.0"
 line-length = 79
 
 lint.ignore = [
-  "F403",
-  "F405",
-  "E501",
+  "F403", # Ignores wildcard imports. 
+  "F405", # Cannot resolve import.
+  "E501", # Ignores line too long.
 ] # Ignore specific rules related to unused imports.
