@@ -12,6 +12,7 @@ SECRET_KEY = env.str("DJANGO_SECRET_KEY", get_random_secret_key())
 DEBUG = env.bool("DJANGO_DEBUG", True)
 
 INSTALLED_APPS += [
+    "django_extensions",
     "rest_framework",
     "rest_framework.authtoken",
     "django_sonar",
