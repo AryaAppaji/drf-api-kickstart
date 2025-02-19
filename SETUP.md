@@ -10,12 +10,28 @@ To use this template you should have `python 3.13` installed on your system and 
 
 - Next clone the repository into your local system.
 
+- Copy the `.env.example` file and paste it in the same directory and rename it as `.env`.
+
+- And create a database if your site uses database and set the following env variables:
+
+  `DB_ENGINE` - databese engine you are using.
+
+  `DB_HOST` - IP address where the databse hosted.
+
+  `DB_PORT` - Port to connect the database server.
+
+  `DB_NAME` - Name of the database you are using.
+
+  `DB_USER` - Username of the database you are using.
+
+  `DB_PASSWORD` - Password of the databse.
+
 - Then run the following commands:
 
-`uv sync`
+  `uv sync`
 
-`uv run set_secret_key`
+  `uv run set_secret_key`
 
 Now you can run all the commands prefix with `uv run manage.py` instead of `python manage.py` prefix.
 
-And your are good to go.
+And you are good to go.
