@@ -19,16 +19,22 @@ from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import (
     SpectacularAPIView,
-    SpectacularRedocView,
+    SpectacularSwaggerView,
 )
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+# You can register the routes in the below example way.
+# router.register(r"url-prefix", viewset, basename)
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("sonar/", include("django_sonar.urls")),
     path("api/schema/", SpectacularAPIView.as_view(), name="schema"),
     path(
-        "api/redoc/",
-        SpectacularRedocView.as_view(url_name="schema"),
-        name="redoc",
+        "api/docs/",
+        SpectacularSwaggerView.as_view(url_name="schema"),
+        name="docs",
     ),
+    path("api/", include(router.urls)),
 ]

@@ -50,19 +50,19 @@ LOGGING = {
     "handlers": {
         "file": {
             "level": "DEBUG",  # Capture all logs from DEBUG and above
-            "class": "logging.FileHandler",
-            "filename": "django.log",
+            "class": "logging.StreamHandler",
+            "filename": "sys.stdout",
             "formatter": "verbose",  # Use the detailed formatter
         },
     },
     "root": {
-        "handlers": ["file"],  # Attach the file handler to capture all logs
+        "handlers": ["console"],  # Attach the file handler to capture all logs
         "level": "DEBUG",  # Capture all logs starting from DEBUG
     },
     "loggers": {
         "django": {
             "handlers": [
-                "file"
+                "console"
             ],  # Attach the file handler for Django-specific logs
             "level": "DEBUG",  # Capture all logs starting from DEBUG
             "propagate": True,

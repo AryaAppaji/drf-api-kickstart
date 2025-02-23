@@ -89,7 +89,7 @@ from rest_framework import status
 from django.shortcuts import get_object_or_404
 
 # Import serializers
-from ..serializers.{view_name.replace('_view', '')}_serializer import (
+from ..serializers.{view_name.replace("_view", "")}_serializer import (
     {class_name}ListSerializer,
     Create{class_name}Serializer,
     Retrieve{class_name}Serializer,

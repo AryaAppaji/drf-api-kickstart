@@ -1,6 +1,5 @@
 from django.core.management.base import BaseCommand
 from pathlib import Path
-import os
 from argparse import ArgumentParser
 from typing import Any
 
