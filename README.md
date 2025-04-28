@@ -1,4 +1,4 @@
-# Django Project Template
+# DRF API Kickstart
 
 This repository serves as a template for setting up Django projects quickly and easily. It includes essential configuration and packages to streamline the development of common backend features. Ideal for developers looking for a reliable starting point, this template supports multiple databases, external storage integration, and real-time WebSocket communication.
 
@@ -27,7 +27,7 @@ This repository serves as a template for setting up Django projects quickly and 
   Real-time communication capabilities through WebSocket support via Django Channels.
 
 - **Pre-built custom-commands for faster development**
-  
+
   `add_model` - Adds the basic sacaffold for given model name to the given app.
 
   `make_custom_command` - Adds the boilerplate to create a custom command.
@@ -42,7 +42,36 @@ This repository serves as a template for setting up Django projects quickly and 
 
   `startapp` - Customized the built-in startapp command to include additional directories and add the newly created app to the settings file.
 
-  To know how to use this template see [SETUP.md](SETUP.md)
+## How to Setup
+
+To know how to use this template checkout [SETUP.md](SETUP.md)
+
+## Official Package Documentations
+
+For official documentations for the packages included in this template, please checkout the below links.
+
+- [Django Extensions](https://django-extensions.readthedocs.io/en/latest/)
+- [Django](https://docs.djangoproject.com/en/5.1/)
+- [Django Environ](https://django-environ.readthedocs.io/en/latest/)
+- [Django REST Framework](https://www.django-rest-framework.org/)
+- [Django Seed](https://github.com/brobin/django-seed)
+- [Factory Boy](https://github.com/FactoryBoy/factory_boy)
+- [Django Storages](https://django-storages.readthedocs.io/en/latest/)
+- [Django Import Export](https://django-import-export.readthedocs.io/en/latest/)
+- [DRF Spectacular](https://drf-spectacular.readthedocs.io/en/latest/)
+- [Django Redis](https://github.com/jazzband/django-redis)
+- [Django Channels](https://channels.readthedocs.io/en/latest/)
+- [MySQL Client](https://mysqlclient.readthedocs.io/)
+- [Psycopg](https://www.psycopg.org/psycopg3/docs/)
+- [Djongo](https://www.djongomapper.com/get-started/)
+- [Oracle DB](https://python-oracledb.readthedocs.io/en/latest/)
+- [Django MSSQL Backend](https://github.com/ESSolutions/django-mssql-backend)
+- [Maria DB](https://mariadb-corporation.github.io/mariadb-connector-python/)
+- [Requests](https://requests.readthedocs.io/en/latest/)
+- [Ruff](https://docs.astral.sh/ruff/)
+- [Jinja2](https://jinja.palletsprojects.com/en/stable/)
+- [Pytest Django](https://pytest-django.readthedocs.io/en/latest/)
+- [Django Sonar](https://github.com/metalogico/django-sonar)
 
 ## Acknowledgments
 
