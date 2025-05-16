@@ -28,7 +28,17 @@ To use this template you should have `python 3.13` installed on your system and 
 
 - Then run the following commands:
 
-  `uv sync`
+  `uv sync` - This will install the default dependencies of the project.
+
+  If you want to install a specific group of dependencies use
+
+  `uv sync --group=group_name`
+
+  And if you want to install dependencies from all groups use
+
+  `uv sync --all-groups`
+
+  And after that you have to set the secret key using the below command
 
   `uv run set_secret_key`
 
