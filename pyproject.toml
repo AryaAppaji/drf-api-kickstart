@@ -1,4 +1,10 @@
 [project]
+name = "drf-api-kickstart"
+version = "0.1.0"
+description = "This project aims to simplify Django project setup by including the most useful packages."
+readme = "README.md"
+requires-python = ">=3.13"
+
 dependencies = [
   "django-extensions>=3.2.3",    # Adds additional features to Django.
   "django>=5.1.6",               # Django Framework.
@@ -18,23 +24,22 @@ dependencies = [
   "django-mssql-backend>=2.8.1", # Enables MSSQL database integration with Django.
   "mariadb>=1.1.11",             # Provides support for MariaDB database.
   "requests>=2.32.3",            # Provides request/response monitoring and profiling.
-  "ruff>=0.9.6",                 # Python linter and formatter.
   "jinja2>=3.1.5",               # Adds support for Jinja templates.
   "pytest-django>=4.10.0",       # Facilitates unit testing with Django.
   "django-sonar>=0.1.8",         # Request monitoring for django applications.
 ]
-description = "This project aims to simplify Django project setup by including the most useful packages."
-name = "drf-api-kickstart"
-readme = "README.md"
-requires-python = ">=3.13"
-version = "0.1.0"
+
+[project.optional-dependencies]
+dev = [
+  "ruff>=0.9.6", # Python linter and formatter.
+]
 
 [tool.ruff]
 # Set the maximum line length to 79 characters.
 line-length = 79
 
 lint.ignore = [
-  "F403", # Ignores wildcard imports. 
+  "F403", # Ignores wildcard imports.
   "F405", # Cannot resolve import.
   "E501", # Ignores line too long.
-] # Ignore specific rules related to unused imports.
+]
