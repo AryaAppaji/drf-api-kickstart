@@ -1,7 +1,8 @@
 .venv/
-.env
 .ruff_cache/
 .pytest_cache/
+**/__pycache__/
 media/
+.env
 *.py[cod]
 django.log
