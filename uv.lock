@@ -233,15 +233,15 @@ sdist = { url = "https://files.pythonhosted.org/packages/5a/19/0423c1a8adb10c9e2
 
 [[package]]
 name = "django-sonar"
-version = "0.1.8"
+version = "0.3.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django" },
     { name = "sqlparse" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c4/01/e8a7f6e595d1f424fff83b9dc3d89386faf4cead82b761ef8d58d24de0de/django_sonar-0.1.8.tar.gz", hash = "sha256:38f86c97696e4cae3e9386b4178a1a9a85177e00ec6d189aae71852c537deb4f", size = 287398, upload-time = "2024-04-04T12:02:01.138Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/99/c5/59bd57f90169eae81a59711a34d2ce13a5a01aa69adb943c8216dd591602/django_sonar-0.3.0.tar.gz", hash = "sha256:6aee9b0a686ba78ca997e547d7cb2b1c056abb7da659de8938951bfadbc8cdd5", size = 314042, upload-time = "2025-10-08T15:39:59.035Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/43/29/282fcc6d067fb7af3f1dc105160da6d3eff888fdc46ec1c3de33604c7bf3/django_sonar-0.1.8-py3-none-any.whl", hash = "sha256:add002dfb29002b742a5e3a829986edad8ea97eb39e6d1420fa461b988ffdb00", size = 296053, upload-time = "2024-04-04T12:01:58.94Z" },
+    { url = "https://files.pythonhosted.org/packages/1b/bd/5501207cf1f43a0203b381085a40d9ba08e2eb3dcf680f5779b6ab1f74f7/django_sonar-0.3.0-py3-none-any.whl", hash = "sha256:b79d7d7aee59a1c39e781191a11d8094b1c9a3b5c1b704ff54b8df550e4f6832", size = 325277, upload-time = "2025-10-08T15:39:57.347Z" },
 ]
 
 [[package]]
@@ -335,7 +335,7 @@ requires-dist = [
     { name = "django-mssql-backend", specifier = ">=2.8.1" },
     { name = "django-redis", specifier = ">=6.0.0" },
     { name = "django-seed", specifier = ">=0.3.1" },
-    { name = "django-sonar", specifier = ">=0.1.8" },
+    { name = "django-sonar", specifier = ">=0.3.0" },
     { name = "django-storages", specifier = ">=1.14.6" },
     { name = "djangorestframework", specifier = ">=3.16.0" },
     { name = "djongo", specifier = ">=1.2.31" },

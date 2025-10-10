@@ -26,7 +26,7 @@ dependencies = [
   "requests>=2.32.4",            # Provides request/response monitoring and profiling.
   "jinja2>=3.1.6",               # Adds support for Jinja templates.
   "pytest-django>=4.11.1",       # Facilitates unit testing with Django.
-  "django-sonar>=0.1.8",         # Request monitoring for django applications.
+  "django-sonar>=0.3.0",         # Request monitoring for django applications.
 ]
 
 [project.optional-dependencies]
