@@ -63,7 +63,7 @@ For official documentations for the packages included in this template, please c
 - [Django Channels](https://channels.readthedocs.io/en/latest/)
 - [MySQL Client](https://mysqlclient.readthedocs.io/)
 - [Psycopg](https://www.psycopg.org/psycopg3/docs/)
-- [Djongo](https://www.djongomapper.com/get-started/)
+- [Django Mongo Backend](https://github.com/parcellab/django-mongo-backend)
 - [Oracle DB](https://python-oracledb.readthedocs.io/en/latest/)
 - [Django MSSQL Backend](https://github.com/ESSolutions/django-mssql-backend)
 - [Maria DB](https://mariadb-corporation.github.io/mariadb-connector-python/)
