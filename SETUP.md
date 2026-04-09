@@ -66,6 +66,4 @@ instead of
 python manage.py <command>
 ```
 
-prefix.
-
 And you are good to go.
