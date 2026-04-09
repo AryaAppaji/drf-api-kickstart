@@ -1,8 +1,10 @@
 ## Prerequisites.
 
-To use this template you should have `python 3.13` installed on your system and `uv` package to be installed. To install uv run the following command:
+To use this template you should have `Python 3.13` installed on your system and `uv` package to be installed. To install uv run the following command:
 
-`pip install uv`
+```bash
+pip install uv
+```
 
 ## Setup in your system.
 
@@ -28,20 +30,42 @@ To use this template you should have `python 3.13` installed on your system and 
 
 - Then run the following commands:
 
-  `uv sync` - This will install the default dependencies of the project.
+  ```bash
+  uv sync
+  ```
+
+  This will install the default dependencies of the project.
 
   If you want to install a specific group of dependencies use
 
-  `uv sync --group=group_name`
+  ```bash
+  uv sync --group=group_name
+  ```
 
   And if you want to install dependencies from all groups use
 
-  `uv sync --all-groups`
+  ```bash
+  uv sync --all-groups
+  ```
 
   And after that you have to set the secret key using the below command
 
-  `uv run set_secret_key`
+  ```bash
+  uv run set_secret_key
+  ```
 
-Now you can run all the commands prefix with `uv run manage.py` instead of `python manage.py` prefix.
+Now you can run all the commands prefix with uv like
+
+```bash
+uv run manage.py <command>
+```
+
+instead of
+
+```bash
+python manage.py <command>
+```
+
+prefix.
 
 And you are good to go.
