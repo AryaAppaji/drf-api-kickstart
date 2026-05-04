@@ -1,6 +1,6 @@
 [project]
 name = "drf-api-kickstart"
-version = "0.88.0"
+version = "0.89.0"
 description = "This project aims to simplify Django project setup by including the most useful packages."
 readme = "README.md"
 requires-python = ">=3.13"
