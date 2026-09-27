@@ -1,6 +1,6 @@
 [project]
 name = "drf-api-kickstart"
-version = "0.89.0"
+version = "0.90.0"
 description = "This project aims to simplify Django project setup by including the most useful packages."
 readme = "README.md"
 requires-python = ">=3.13"
@@ -22,11 +22,11 @@ dependencies = [
   "oracledb>=3.4.2",             # Enables OracleDB integration with Django.
   "django-mssql-backend>=2.8.1", # Enables MSSQL database integration with Django.
   "mariadb>=1.1.14",             # Provides support for MariaDB database.
-  "requests>=2.33.1",            # Provides request/response monitoring and profiling.
   "jinja2>=3.1.6",               # Adds support for Jinja templates.
   "pytest-django>=4.12.0",       # Facilitates unit testing with Django.
   "django-sonar>=0.5.1",         # Request monitoring for django applications.
   "django-mongo-backend>=0.29",  # Enables MongoDB integration with Django.
+  "httpx>=0.28.1",               # Allows to call external APIs from Django.
 ]
 
 [project.optional-dependencies]
