@@ -9,7 +9,6 @@ This repository serves as a template for setting up Django projects quickly and 
 
 - **Database Support**  
   Packages included for the following databases:
-
   - MySQL
   - PostgreSQL
   - MSSQL
@@ -72,6 +71,7 @@ For official documentations for the packages included in this template, please c
 - [Jinja2](https://jinja.palletsprojects.com/en/stable/)
 - [Pytest Django](https://pytest-django.readthedocs.io/en/latest/)
 - [Django Sonar](https://github.com/metalogico/django-sonar)
+- [HTTPX](https://www.python-httpx.org/)
 
 ## Acknowledgments
 
